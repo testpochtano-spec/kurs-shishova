@@ -158,12 +158,8 @@
         }
 
         .hero-text h1 {
-            font-size: clamp(40px, 5vw, 64px);
-            font-weight: 900;
-            letter-spacing: -0.03em;
-            line-height: 1.05;
-            color: var(--text);
-            margin-bottom: 24px;
+            font-size: clamp(32px, 8vw, 64px);
+            word-break: break-word;
         }
 
         .hero-text h1 .accent {
@@ -175,11 +171,11 @@
         }
 
         .hero-text .tagline {
-            font-size: 20px;
+            font-size: 16px;
             font-weight: 300;
             color: var(--text-secondary);
             margin-bottom: 40px;
-            max-width: 480px;
+            word-break: break-word;
         }
 
         @media (max-width: 900px) {
@@ -197,6 +193,12 @@
 
         @media (max-width: 900px) {
             .hero-meta {
+                justify-content: center;
+                gap: 16px;
+            }
+
+            .hero-meta .meta-item {
+                flex-basis: calc(50% - 8px);
                 justify-content: center;
             }
         }
@@ -942,8 +944,16 @@
 
         /* Responsive */
         @media (max-width: 600px) {
+            body {
+                overflow-x: hidden;
+            }
+
             .header-inner {
-                padding: 12px 20px;
+                padding: 12px 16px;
+            }
+
+            .logo svg {
+                width: 100px;
             }
 
             .logo-text {
@@ -951,37 +961,139 @@
             }
 
             .header-cta {
-                padding: 10px 16px;
-                font-size: 12px;
+                padding: 8px 12px;
+                font-size: 11px;
             }
 
             .hero-content {
-                padding: 100px 20px 60px;
+                padding: 90px 16px 40px;
+                gap: 24px;
+            }
+
+            .hero-text h1 {
+                font-size: clamp(26px, 9vw, 36px);
+                line-height: 1.15;
+                margin-bottom: 12px;
+            }
+
+            .hero-text .tagline {
+                font-size: 14px;
+                margin-bottom: 20px;
+            }
+
+            .hero-meta {
+                gap: 8px;
+                margin-bottom: 24px;
+            }
+
+            .hero-meta .meta-item {
+                flex-basis: calc(50% - 4px);
+            }
+
+            .meta-icon {
+                width: 36px;
+                height: 36px;
+            }
+
+            .meta-icon svg {
+                width: 18px;
+                height: 18px;
+            }
+
+            .meta-label {
+                font-size: 11px;
+            }
+
+            .meta-value {
+                font-size: 13px;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .hero-cta .btn {
+                width: 100%;
+                padding: 16px 24px;
+                font-size: 15px;
+            }
+
+            .hero-image img {
+                border-radius: 20px;
             }
 
             .gallery-track {
-                padding: 0 20px;
+                padding: 0 16px;
             }
 
             .gallery-item {
-                width: 280px;
-                height: 350px;
+                width: 240px;
+                height: 300px;
+            }
+
+            .gallery-header h2 {
+                font-size: 24px;
             }
 
             .speaker, .program, .pricing, .location, .social {
-                padding: 80px 20px;
+                padding: 48px 16px;
+            }
+
+            .speaker-badge {
+                bottom: -12px;
+                right: -12px;
+                padding: 14px 20px;
+            }
+
+            .speaker-badge .num {
+                font-size: 24px;
             }
 
             .pricing-card {
-                padding: 40px 24px;
+                padding: 28px 16px;
+            }
+
+            .pricing-card h2 {
+                font-size: 22px;
             }
 
             .price-value {
-                font-size: 56px;
+                font-size: 44px;
+            }
+
+            .price-breakdown {
+                font-size: 12px;
+                padding: 8px 14px;
+            }
+
+            .location-grid {
+                gap: 32px;
+            }
+
+            .location-item {
+                gap: 12px;
+            }
+
+            .location-icon {
+                width: 44px;
+                height: 44px;
+            }
+
+            .footer-main {
+                padding: 40px 16px;
+                grid-template-columns: 1fr;
+                gap: 32px;
+                text-align: center;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 20px;
             }
 
             .footer-bottom {
-                padding: 24px 20px;
+                padding: 20px 16px;
             }
         }
     </style>
