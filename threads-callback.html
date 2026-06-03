@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Threads Authorization Callback</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; margin: 0; background: #f7f8fb; color: #172033; }
+    main { max-width: 760px; margin: 0 auto; padding: 56px 24px; }
+    section { background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 32px; }
+    h1 { margin-top: 0; }
+    textarea { width: 100%; min-height: 96px; font: 14px ui-monospace, SFMono-Regular, Menlo, monospace; padding: 12px; box-sizing: border-box; }
+    button { margin-top: 12px; padding: 10px 16px; border: 0; border-radius: 8px; background: #111827; color: #fff; cursor: pointer; }
+    .error { color: #b91c1c; }
+    .muted { color: #64748b; }
+  </style>
+</head>
+<body>
+  <main>
+    <section>
+      <h1>Threads Authorization</h1>
+      <p id="status" class="muted">Reading authorization response...</p>
+      <textarea id="code" readonly></textarea>
+      <button id="copy" type="button">Copy code</button>
+      <p class="muted">
+        Paste this code back into the local authorization script to finish connecting Threads.
+      </p>
+    </section>
+  </main>
+  <script>
+    var params = new URLSearchParams(window.location.search);
+    var error = params.get("error") || params.get("error_message");
+    var code = params.get("code");
+    var status = document.getElementById("status");
+    var box = document.getElementById("code");
+    var copy = document.getElementById("copy");
+
+    if (error) {
+      status.textContent = "Authorization error: " + error;
+      status.className = "error";
+      box.value = window.location.href;
+    } else if (code) {
+      status.textContent = "Authorization code received. Copy it and return to Codex.";
+      box.value = code;
+    } else {
+      status.textContent = "No authorization code was found in this URL.";
+      status.className = "error";
+      box.value = window.location.href;
+    }
+
+    copy.addEventListener("click", function () {
+      box.select();
+      document.execCommand("copy");
+      copy.textContent = "Copied";
+    });
+  </script>
+</body>
+</html>
