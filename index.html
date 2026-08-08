@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ответы на вопросы о здоровье — Семинар Ольги Шишовой</title>
+    <title>Желудочно-кишечный тракт — наш второй мозг | Семинар Ольги Шишовой</title>
+    <meta name="description" content="Авторский семинар Ольги Ивановны Шишовой о работе желудочно-кишечного тракта, саморегуляции, кровообращении и иммунитете. Москва, 29 сентября 2026 года.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Museo+Sans+Cyrl:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Museo+Sans+Cyrl:wght@300;400;500;700;900&amp;display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -158,7 +159,11 @@
         }
 
         .hero-text h1 {
-            font-size: clamp(32px, 8vw, 64px);
+            margin-bottom: 24px;
+            font-size: clamp(32px, 5vw, 64px);
+            font-weight: 900;
+            line-height: 1.03;
+            letter-spacing: -0.04em;
             word-break: break-word;
         }
 
@@ -239,6 +244,9 @@
         .hero-image img {
             width: 100%;
             max-width: 500px;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+            object-position: center;
             border-radius: 32px;
             box-shadow: 0 40px 80px rgba(0, 0, 0, 0.12);
         }
@@ -358,6 +366,82 @@
 
         .gallery-item:hover img {
             transform: scale(1.05);
+        }
+
+        /* Proof Section */
+        .proof {
+            padding: 120px 48px;
+            background: linear-gradient(145deg, #063F3B 0%, var(--primary) 100%);
+            color: var(--white);
+            overflow: hidden;
+        }
+
+        .proof-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 64px;
+            align-items: center;
+        }
+
+        .proof-image {
+            position: relative;
+        }
+
+        .proof-image img {
+            width: 100%;
+            display: block;
+            border-radius: 28px;
+            box-shadow: 0 30px 70px rgba(0, 0, 0, 0.28);
+        }
+
+        .proof-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 9px 16px;
+            margin-bottom: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.24);
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.1);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        .proof-copy h2 {
+            max-width: 520px;
+            margin-bottom: 24px;
+            font-size: clamp(32px, 4vw, 52px);
+            line-height: 1.05;
+            letter-spacing: -0.03em;
+        }
+
+        .proof-copy p {
+            max-width: 540px;
+            margin-bottom: 18px;
+            color: rgba(255, 255, 255, 0.82);
+            font-size: 17px;
+            font-weight: 300;
+            line-height: 1.8;
+        }
+
+        .proof-note {
+            padding: 18px 20px;
+            border-left: 3px solid var(--primary-light);
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 0 16px 16px 0;
+        }
+
+        @media (max-width: 900px) {
+            .proof {
+                padding: 72px 24px;
+            }
+
+            .proof-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
         }
 
         /* Speaker Section */
@@ -1125,9 +1209,9 @@
         <div class="hero-content">
             <div class="hero-text fade-up">
                 <h1>
-                    Ответы на вопросы<br>о <span class="accent">здоровье</span>
+                    Желудочно-кишечный тракт — <span class="accent">наш второй мозг</span>
                 </h1>
-                <p class="tagline">Живая встреча с Ольгой Ивановной Шишовой — врачом высшей категории и экспертом в области восстановительной медицины</p>
+                <p class="tagline">Авторский семинар Ольги Ивановны Шишовой о саморегуляции ЖКТ, кровообращении, иммунитете и практических способах поддержать работу пищеварительной системы</p>
 
                 <div class="hero-meta">
                     <div class="meta-item">
@@ -1141,7 +1225,7 @@
                         </div>
                         <div>
                             <div class="meta-label">Дата</div>
-                            <div class="meta-value">19 апреля 2026</div>
+                            <div class="meta-value">29 сентября 2026</div>
                         </div>
                     </div>
                     <div class="meta-item">
@@ -1182,7 +1266,7 @@
             </div>
 
             <div class="hero-image fade-up">
-                <img src="images/1.jpg" alt="Ольга Шишова">
+                <img src="images/zhkt-hero.jpg" alt="Ольга Шишова проводит семинар о здоровье желудочно-кишечного тракта">
             </div>
         </div>
     </section>
@@ -1190,26 +1274,41 @@
     <!-- Gallery -->
     <section class="gallery">
         <div class="gallery-header fade-up">
-            <h2>Как проходят наши семинары</h2>
+            <h2>Живая теория, разборы и практика</h2>
         </div>
         <div class="gallery-track">
             <div class="gallery-item">
-                <img src="images/1.jpg" alt="Семинар">
+                <img src="images/zhkt-gallery-1.jpg" alt="Ольга Шишова отвечает на вопросы участников семинара">
             </div>
             <div class="gallery-item">
-                <img src="images/2.jpg" alt="Участники">
+                <img src="images/zhkt-gallery-2.jpg" alt="Участники семинара слушают лекцию">
             </div>
             <div class="gallery-item">
-                <img src="images/4.jpg" alt="Обучение">
+                <img src="images/zhkt-gallery-3.jpg" alt="Лекционная часть авторского семинара">
             </div>
             <div class="gallery-item">
-                <img src="images/5.jpg" alt="Практика">
+                <img src="images/zhkt-gallery-4.jpg" alt="Участники осваивают практический приём">
             </div>
             <div class="gallery-item">
-                <img src="images/6.jpg" alt="Встреча">
+                <img src="images/zhkt-gallery-5.jpg" alt="Практическая часть семинара Ольги Шишовой">
             </div>
             <div class="gallery-item">
-                <img src="images/33.jpg" alt="Общение">
+                <img src="images/zhkt-group.jpg" alt="Участники авторского семинара Ольги Шишовой">
+            </div>
+        </div>
+    </section>
+
+    <!-- Previous seminar proof -->
+    <section class="proof">
+        <div class="container proof-grid">
+            <div class="proof-image fade-up">
+                <img src="images/zhkt-group.jpg" alt="Участники семинара Ольги Шишовой в Санкт-Петербурге">
+            </div>
+            <div class="proof-copy fade-up">
+                <div class="proof-label">Как это было в Петербурге</div>
+                <h2>Знания, которые сразу переходят в практику</h2>
+                <p>На предыдущей встрече участники разбирали тонкости работы ЖКТ, состояния слизистых, головные боли и воспалительные процессы в разных органах.</p>
+                <p class="proof-note">Атмосфера получилась домашней, гостеприимной и местами юморной — с живыми вопросами, практикой и возможностью вернуться к сложным моментам по записи.</p>
             </div>
         </div>
     </section>
@@ -1219,7 +1318,7 @@
         <div class="container">
             <div class="speaker-grid">
                 <div class="speaker-image fade-up">
-                    <img src="images/22.jpg" alt="Ольга Ивановна Шишова">
+                    <img src="images/1.jpg" alt="Ольга Ивановна Шишова">
                     <div class="speaker-badge">
                         <span class="num">25+</span>
                         лет опыта
@@ -1227,9 +1326,9 @@
                 </div>
                 <div class="speaker-info fade-up">
                     <h2>Ольга Ивановна Шишова</h2>
-                    <div class="speaker-title">Врач по клинической лабораторной диагностике</div>
+                    <div class="speaker-title">Врач по клинической лабораторной диагностике, профессор МУФО</div>
                     <p class="speaker-bio">
-                        Главный врач медицинского центра «Целиус». Доктор альтернативной медицины Оксфордской Образовательной Сети. Профессор МУФО. Специалист по восстановительной медицине и общественному здоровью с более чем 25-летним стажем.
+                        Главный врач медицинского центра «Целиус». Специалист по восстановительной медицине и общественному здоровью. Автор практического подхода, который помогает увидеть взаимосвязи в работе организма и применять знания в повседневной жизни.
                     </p>
                     <div class="credentials">
                         <div class="credential">
@@ -1251,7 +1350,7 @@
                                 <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
                                 <polyline points="22 4 12 14.01 9 11.01"></polyline>
                             </svg>
-                            Оксфордская сеть
+                            Главный врач «Целиус»
                         </div>
                     </div>
                 </div>
@@ -1264,44 +1363,44 @@
         <div class="container">
             <div class="section-header fade-up">
                 <h2>Программа семинара</h2>
-                <p>6 практических тем для вашего здоровья</p>
+                <p>От устройства системы — к понятным действиям и практике</p>
             </div>
 
             <div class="program-grid">
                 <div class="program-card fade-up">
                     <div class="program-num">1</div>
-                    <h3>Вопросы пациентов</h3>
-                    <p>Разберём вопросы, которые Ольга Ивановна получает ежедневно от своих пациентов и подписчиков</p>
+                    <h3>ЖКТ и саморегуляция</h3>
+                    <p>Как поддерживать естественные механизмы саморегуляции в органах пищеварения</p>
                 </div>
 
                 <div class="program-card fade-up">
                     <div class="program-num">2</div>
-                    <h3>Индивидуальные рекомендации</h3>
-                    <p>Ответы на ваши вопросы из зала с конкретными рекомендациями по нормализации здоровья</p>
+                    <h3>Активный кровоток</h3>
+                    <p>Почему кровоснабжение важно на всём протяжении желудочно-кишечного тракта и как его поддерживать</p>
                 </div>
 
                 <div class="program-card fade-up">
                     <div class="program-num">3</div>
-                    <h3>Самомассаж лимфы</h3>
-                    <p>Практические примеры работы с лимфатической системой — техники для домашнего применения</p>
+                    <h3>Положение органов</h3>
+                    <p>Что помогает предупреждать расширение, опущение и перерастяжение органов пищеварения</p>
                 </div>
 
                 <div class="program-card fade-up">
                     <div class="program-num">4</div>
-                    <h3>Самодиагностика</h3>
-                    <p>Приёмы диагностики в домашних условиях — научитесь понимать сигналы своего организма</p>
+                    <h3>Иммунитет ЖКТ</h3>
+                    <p>Роль пищеварительной системы в иммунной защите и ежедневном самочувствии</p>
                 </div>
 
                 <div class="program-card fade-up">
                     <div class="program-num">5</div>
-                    <h3>Диафрагмальное дыхание</h3>
-                    <p>Техники правильного дыхания и рекомендации по частоте применения</p>
+                    <h3>Микромир внутри нас</h3>
+                    <p>Как выстраивать гармоничное сосуществование с бактериями, вирусами, грибами и другими микроорганизмами</p>
                 </div>
 
                 <div class="program-card fade-up">
                     <div class="program-num">6</div>
-                    <h3>Профилактика</h3>
-                    <p>Не откладываем на завтра то важное для здоровья, чему можно научиться сегодня</p>
+                    <h3>Практика и вопросы</h3>
+                    <p>Разбор частых состояний, демонстрация практических приёмов и ответы на вопросы участников</p>
                 </div>
             </div>
         </div>
@@ -1317,11 +1416,11 @@
 
             <div class="pricing-card fade-up">
                 <h2>Семинар</h2>
-                <p class="pricing-date">19 апреля 2026 • Москва</p>
+                <p class="pricing-date">29 сентября 2026 • Москва</p>
 
                 <div class="price-main">
                     <div class="price-label">Полная стоимость</div>
-                    <div class="price-value"><sup>₽</sup>7 000</div>
+                    <div class="price-value"><sup>₽</sup>5 000</div>
                 </div>
 
                 <div class="price-breakdown">
@@ -1350,7 +1449,7 @@
                                 <polyline points="20 6 9 17 4 12"></polyline>
                             </svg>
                         </div>
-                        <span class="feature-text">Практические навыки самомассажа</span>
+                        <span class="feature-text">Понятная система знаний о работе ЖКТ</span>
                     </div>
                     <div class="feature">
                         <div class="feature-icon">
@@ -1358,7 +1457,7 @@
                                 <polyline points="20 6 9 17 4 12"></polyline>
                             </svg>
                         </div>
-                        <span class="feature-text">Ответы на ваши вопросы</span>
+                        <span class="feature-text">Практические приёмы и демонстрации</span>
                     </div>
                     <div class="feature">
                         <div class="feature-icon">
@@ -1366,18 +1465,18 @@
                                 <polyline points="20 6 9 17 4 12"></polyline>
                             </svg>
                         </div>
-                        <span class="feature-text">Методические материалы</span>
+                        <span class="feature-text">Ответы на вопросы участников</span>
                     </div>
                 </div>
 
-                <a href="https://olgashishova.ru/uchebnyj-center/12219/" class="btn btn-primary btn-pay" target="_blank">
+                <a href="https://olgashishova.ru/uchebnyj-center/14029/" class="btn btn-primary btn-pay" target="_blank" rel="noopener">
                     Забронировать место
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                         <line x1="5" y1="12" x2="19" y2="12"></line>
                         <polyline points="12 5 19 12 12 19"></polyline>
                     </svg>
                 </a>
-                <a href="https://olgashishova.ru/uchebnyj-center/12219/" class="btn-pay-secondary" target="_blank">
+                <a href="https://olgashishova.ru/uchebnyj-center/14029/" class="btn-pay-secondary" target="_blank" rel="noopener">
                     Узнать подробности
                 </a>
             </div>
@@ -1400,7 +1499,7 @@
                             </div>
                             <div>
                                 <h4>Адрес</h4>
-                                <p>Гостиница «Бета» Измайлово<br>Конференц-зал «Весна» (2-й этаж)<br>Измайловское шоссе, 71к2Б, Москва</p>
+                                <p>Конференц-зал «Измайлово» (3-й этаж)<br>Измайловское шоссе, 71кА, Москва</p>
                             </div>
                         </div>
                         <div class="location-item">
@@ -1418,7 +1517,7 @@
                     </div>
                 </div>
                 <div class="location-map fade-up">
-                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A3a8f9e8b4c1e4e8c9d0e9f8c7b6a5d4e&amp;source=constructor&amp;ll=37.749200%2C55.789200&amp;z=16&amp;pt=37.749200%2C55.789200%2Cpm2rdm" loading="lazy"></iframe>
+                    <iframe src="https://yandex.ru/map-widget/v1/?text=%D0%98%D0%B7%D0%BC%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B5%20%D1%88%D0%BE%D1%81%D1%81%D0%B5%2C%2071%D0%BA%D0%90%2C%20%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0&amp;z=16" title="Карта места проведения семинара" loading="lazy"></iframe>
                 </div>
             </div>
         </div>
