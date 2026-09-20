@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="VideoUpload Automation: a private desktop workflow for preparing video content and transferring it to the owner's Google Drive publishing queue.">
+  <meta name="referrer" content="no-referrer">
+  <title>VideoUpload Automation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><nav aria-label="Main navigation"><a href="./" aria-current="page">VideoUpload Automation</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></nav></header>
+  <main>
+    <p class="meta">Private desktop application</p>
+    <h1>VideoUpload Automation</h1>
+    <p class="lead">A locally operated video workflow that prepares clips, transfers them to Google Drive, and hands them to the owner's configured publishing schedule.</p>
+    <p>This application is used by its operator for accounts and content they own or are authorized to manage. It is not a public registration service. This website provides information about the application; video processing and authorization run on the operator's computer.</p>
+
+    <h2>Google Drive integration</h2>
+    <p>The operator authorizes the desktop application with Google. The upload component requests <code>https://www.googleapis.com/auth/drive.file</code> to work with files created by, or explicitly made available to, the application. It uploads prepared videos to the configured Drive folder and reads file identifiers and metadata to track delivery and avoid duplicate uploads.</p>
+    <p>This authorization does not grant access to every file in the Google account. A separately configured service account can read working folders that the operator has explicitly shared with it.</p>
+
+    <h2>Publishing workflow</h2>
+    <ol>
+      <li>The operator configures source media, destination accounts, and a publication schedule.</li>
+      <li>The desktop application prepares clips and associated titles, descriptions, and cover images.</li>
+      <li>Prepared content is transferred to the working Drive folder and the local publication queue.</li>
+      <li>Separately authorized integrations deliver content to enabled destinations, which may include YouTube, VK, Instagram, Threads, and TikTok.</li>
+    </ol>
+    <p>Media and text may be processed by Google Vertex AI/Gemini or a local Ollama model when those features are enabled. Google authorization credentials stay in the local configuration and are not published on this website.</p>
+
+    <h2>Privacy and contact</h2>
+    <p>Read the <a href="privacy.html">Privacy Policy</a> for the data accessed, its use, retention, sharing, and deletion options, and the <a href="terms.html">Terms of Service</a> for permitted use and service limitations.</p>
+    <p>Operator support: <a href="mailto:testpochtano@gmail.com">testpochtano@gmail.com</a>.</p>
+    <p class="meta">VideoUpload Automation is independently operated and is not a Google product or endorsed by Google.</p>
+  </main>
+  <footer>VideoUpload Automation &middot; Updated September 20, 2026</footer>
+</body>
+</html>

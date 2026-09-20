@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How VideoUpload Automation accesses, uses, stores, and shares Google Drive data, and how to revoke access or request deletion.">
+  <meta name="referrer" content="no-referrer">
+  <title>Privacy Policy | VideoUpload Automation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><nav aria-label="Main navigation"><a href="./">VideoUpload Automation</a><a href="privacy.html" aria-current="page">Privacy Policy</a><a href="terms.html">Terms of Service</a></nav></header>
+  <main>
+    <h1>Privacy Policy</h1>
+    <p class="meta">VideoUpload Automation &middot; Effective September 20, 2026</p>
+    <p>VideoUpload Automation is a private desktop video-processing and publishing workflow. This policy covers its Google Drive integration and the handling of content passed through the configured publishing workflow. The operator can be contacted at <a href="mailto:testpochtano@gmail.com">testpochtano@gmail.com</a>.</p>
+
+    <h2>Data we access</h2>
+    <ul>
+      <li><strong>Google authorization data:</strong> access tokens, refresh tokens, granted permissions, and token expiry information needed to connect the application to Drive.</li>
+      <li><strong>Working files:</strong> video content, file and folder names, identifiers, sizes, links, and upload metadata for the files the application is permitted to access.</li>
+      <li><strong>Workflow records:</strong> locally prepared clips, transcripts, titles, descriptions, cover images, processing errors, and delivery status associated with the selected content.</li>
+    </ul>
+    <p>The desktop uploader requests the limited <code>drive.file</code> permission for files created by, or explicitly made available to, the app. This grant is not permission to read the whole Drive. A separate service account used by the publishing process has access to folders explicitly shared with it. The Drive integration does not request Gmail, Contacts, or Calendar access.</p>
+
+    <h2>Purpose of processing</h2>
+    <p>Data is used to prepare the operator's content, upload and locate working files, recover interrupted transfers, prevent duplicate uploads, and deliver content according to the operator's configured schedule. Tokens are used only to authenticate API requests and refresh access. The application does not sell Google user data, use it for advertising or profiling, or use it to train general-purpose AI models.</p>
+    <p>We apply the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including its Limited Use requirements, to the use and transfer of Google API data. Access is limited to the authorized workflow and necessary support, security, or legal purposes.</p>
+
+    <h2>Storage and security</h2>
+    <p>Credentials, configuration, processing artifacts, and delivery logs are stored as local files on the operator's computer. Uploaded working media is stored in the configured Google Drive folder. Google API requests use HTTPS. The operator is responsible for protecting the computer, restricting local access, and securing any backups.</p>
+    <p>This informational website does not receive OAuth tokens, authorization codes, or video uploads. Google authorization is completed by the desktop application through a local callback. These pages do not include analytics scripts, advertising, or application tracking cookies. GitHub Pages hosts the website and may process connection data, such as IP addresses, under <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub's privacy statement</a>.</p>
+
+    <h2>Sharing and service providers</h2>
+    <p>Google processes authentication and Drive storage requests. At the operator's direction, selected media and publishing text can be sent to enabled YouTube, VK, Instagram, Threads, or TikTok integrations. Dropbox may be used as temporary media hosting for configured destinations. Where enabled, relevant media or text may be processed by Google Vertex AI/Gemini to prepare metadata or cover images; Ollama processing runs locally.</p>
+    <p>Each provider applies its own terms and privacy practices. Public posting can make selected content available to that platform's audience. Authorizing Drive alone does not authorize an unrelated destination: platform connections and the publishing schedule are configured separately. Google authorization credentials are not published with media or on GitHub Pages.</p>
+
+    <h2>Retention, revocation, and deletion</h2>
+    <p>Local files, queue records, and logs remain until the operator removes them or the configured cleanup process removes them. Drive files and copies sent to other providers remain until removed in the corresponding service, subject to that provider's retention rules. No universal automatic deletion period is promised.</p>
+    <p>You can revoke the application's Google access from <a href="https://myaccount.google.com/connections">Google Account connections</a>. Revocation stops future authorized access but does not delete existing files or published posts. Stop scheduled jobs before removing local credentials, working files, and backups. Remove Drive files and any published copies separately. Service-account folder access can be withdrawn in Drive sharing settings.</p>
+    <p>For access, correction, or deletion requests, contact <a href="mailto:testpochtano@gmail.com">testpochtano@gmail.com</a>. Do not send passwords, tokens, or sensitive source material by email. We may ask for information needed to identify the relevant record and confirm your authority over it.</p>
+
+    <h2>Changes</h2>
+    <p>Material changes to data use will be reflected on this page before they apply. Additional permissions or materially different uses require appropriate authorization. The effective date above identifies this version.</p>
+  </main>
+  <footer><a href="./">Application home</a> &middot; <a href="terms.html">Terms of Service</a></footer>
+</body>
+</html>
